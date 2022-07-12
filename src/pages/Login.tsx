@@ -8,11 +8,13 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   
+  
 
   const submit = async (e: SyntheticEvent) => {
       e.preventDefault();
 
-      const response = await fetch('http://localhost:8000/users/login', {
+      const response = await fetch('http://localhost:8000/signin', {
+        
        
       method: 'POST',
       
@@ -26,8 +28,8 @@ const Login = () => {
       });
       
       if (response.status === 200) {
-          const data = await newFunction(response);
-          console.log(data);
+          
+            localStorage.setItem('loggedIn', 'true');
           navigate('/');
       }
   }
@@ -51,6 +53,3 @@ const Login = () => {
 
 export default Login;
 
-async function newFunction(response: Response) {
-    return await response.json();
-}
