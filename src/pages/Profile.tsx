@@ -35,7 +35,7 @@ const UserProfile = () => {
         <div>
             <h1>User Profile</h1>
             
-            <p>{user}</p>	
+            <p>user: {user}</p>	
             
 
         </div>
