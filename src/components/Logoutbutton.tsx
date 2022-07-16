@@ -35,8 +35,8 @@ const LogoutButton = () => {
   
     return (
         <form onSubmit={submit}>
-        <button  className="logout-button" type="submit">
-        <FontAwesomeIcon icon={faSignOutAlt as IconProp} />
+        <button  className="logout-button border-0 bg-white " type="submit">
+        Log Out  <FontAwesomeIcon icon={faSignOutAlt as IconProp} />
         </button>
         </form>
     );

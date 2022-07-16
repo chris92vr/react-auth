@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react';
 const UserProfile = () => {
 
     const [user, setUser] = useState('');
+    const [password, setPassword] = useState('');
    
 
     useEffect(() => {
@@ -21,6 +22,8 @@ const UserProfile = () => {
       
           // set state with the result
           setUser(json.email);
+          setPassword(json.Password);
+
 
         }
       
@@ -29,6 +32,7 @@ const UserProfile = () => {
           // make sure to catch any error
           .catch(console.error);;
           console.log(result);
+          
       }, [])
 
     return (
@@ -36,9 +40,10 @@ const UserProfile = () => {
             <h1>User Profile</h1>
             
             <p>user: {user}</p>	
+            <p>password: {password}</p>
             
-
-        </div>
+                                
+            </div>
     )
 
       

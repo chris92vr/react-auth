@@ -31,9 +31,9 @@ const ProfileButton = () => {
     }
 
     return (
-        <form onSubmit={submit}>
-        <button  className="profile-button" type="submit">
-        <FontAwesomeIcon icon={faUser as IconProp} />
+        <form onSubmit={submit}  >
+        <button  className="profile-button border-0 bg-white  " type="submit">
+        Profile   <FontAwesomeIcon icon={faUser as IconProp} />
         </button>
         </form>
     );

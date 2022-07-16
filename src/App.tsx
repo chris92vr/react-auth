@@ -13,7 +13,7 @@ import Profile from './pages/Profile';
 
 
 function App() {
- 
+  
 
 
 
@@ -21,20 +21,16 @@ function App() {
     <div className="App">
       <BrowserRouter>
          <Nav />
+
          
-     <main className="form-signin w-100 m-auto">
+     <main className="form-signin w-100 m-auto mt-5">
       
       <Routes>
       <Route path="/" element={<Home />}/>
-      if (loggedIn === 'true') {
-       // <Route path="/logout" element={<Logout />}/>
-        //<p>You are logged in</p>
-      } 
+     
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/profile" element={<Profile />}/>
-      
-        
       
         
         

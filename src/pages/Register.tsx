@@ -22,12 +22,13 @@ const Register = () => {
                 email,
                 password,
                 
-            })
-          
+            }),
+        
         
         });
         
         if (response.status === 200) {
+          email.toLocaleLowerCase();
             const data = await response.json();
             console.log(data);
             navigate('/login');

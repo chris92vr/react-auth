@@ -3,10 +3,13 @@ import React, { SyntheticEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
+
+
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  
   
   
 
@@ -14,6 +17,7 @@ const Login = () => {
       e.preventDefault();
 
       const response = await fetch('http://localhost:8000/signin', {
+        
         
        
       method: 'POST',
@@ -27,9 +31,13 @@ const Login = () => {
           })
       });
       
+      
       if (response.status === 200) {
+        
+        
+        localStorage.setItem("isLoggedIn", "true");
           
-            localStorage.setItem('loggedIn', 'true');
+            
           navigate('/');
       }
   }
